@@ -3,7 +3,6 @@ $(document).ready(onReady);
 // Assign integer 0 to variable.
 let totalCount = 0;
 
-
 function onReady() {
 // Hey jQuery, on elements with .submit-button, on clicking button, execute handleInput.
 $( '.submit-button' ).on( 'click', handleInput);
