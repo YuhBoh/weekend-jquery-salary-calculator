@@ -19,7 +19,10 @@ function handleInput() {
   let lastName = $('.inputLastName').val();
   let id = $('.inputID').val();
   let title = $('.inputTitle').val();
-  let annualSalary = Number($('.inputAnnualSalary').val());
+  let annualSalary = parseFloat($('.inputAnnualSalary').val());
+  let newAnnualSalary = annualSalary.toFixed(2);
+  let newerAnnualSalary = Number(newAnnualSalary);
+  let finalAnnualSalary = newerAnnualSalary.toLocaleString("en-US");
 
 // Hey jQuery, in tbody, append(add) value in ().
   $( 'tbody' ).append(
@@ -28,7 +31,7 @@ function handleInput() {
       <td>${lastName}</td>
       <td>${id}</td>
       <td>${title}</td>
-      <td class="salary">$<span class="total-salary">${annualSalary}</span></td>
+      <td class="salary">$<span class="total-salary">${finalAnnualSalary}</span></td>
       <td class="delete-box">
         <button class="delete-button">Delete</button>
       </td>
@@ -45,7 +48,10 @@ function handleInput() {
 
 // Get monthlyCost by adding all annualSalary.
   totalCount += annualSalary;
-  $('.total-count').text(totalCount);
+  let newTotalCount = totalCount.toFixed(2);
+  let newerTotalCount = Number(newTotalCount);
+  let finalTotalCount = newerTotalCount.toLocaleString("en-US");
+  $('.total-count').text(finalTotalCount);
 // If TOTAL monthly cost esceeds $20,000, add red background to total cost.
 if (totalCount > 20000) {
   $('.red').css("background-color", "red");
