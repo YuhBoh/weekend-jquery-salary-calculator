@@ -74,17 +74,11 @@ th, td {
 }
 
 .delete-box {
-  display: flex;
-  justify-content: center;
-  border: 1px;
+  text-align: center;
 }
 
 .delete-button {
   width: 80px;
-}
-
-.last-row {
-  border: 1px black solid;
 }
 
 /* Bottom Section */
