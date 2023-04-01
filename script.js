@@ -8,8 +8,8 @@ function onReady() {
 // Hey jQuery, on elements with .submit-button, on clicking button, execute handleInput.
 $( '.submit-button' ).on( 'click', handleInput);
 
-// Hey jQuery, on elements with .delete-button, on clicking button, execute deleteInput.
-$( '.delete-button' ).on( 'click', deleteInput);
+// Hey jQuery, on element or elements with .delete-button, on clicking button, execute deleteInput.
+$( 'tbody' ).on( 'click', '.delete-button', deleteInput);
 }
 
 function handleInput() {
@@ -53,6 +53,5 @@ if (totalCount > 20000) {
 }
 
 function deleteInput() {
-
 $(this).parent().parent().remove();
 }
