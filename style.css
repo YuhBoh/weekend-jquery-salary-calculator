@@ -85,6 +85,7 @@ th, td {
 
 .bottom-section {
   font-size: 20px;
-  text-align: right;
+  display: flex;
+  justify-content: end;
   margin-top: 20px;
 }
